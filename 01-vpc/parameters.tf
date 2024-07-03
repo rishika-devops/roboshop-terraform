@@ -18,3 +18,6 @@ resource "aws_ssm_parameter" "private_subnet_ids" {
   type  = "StringList"
   value = join("," , module.roboshop.private_subnet_ids)
 }
+output "public_subnet_ids" {
+   value = module.roboshop.public_subnet_ids
+ }
